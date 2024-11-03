@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    .project-card {
+      background-color: #1f2937; /* Dark gray background */
+      padding: 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 350px;
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+    }
+    .project-title {
+      color: #0800ff; /*blue color */
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .divider {
+      border-bottom: 1px solid #333; /* Divider */
+      margin: 10px 0;
+    }
+    .company-name, .tech-stack, .role {
+      color: #b0b3b8; /* Light gray text color */
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .view-details {
+      background-color: #e8e8f6; /*gray background */
+      color: #1d1b1b;
+      padding: 8px 16px;
+      border-radius: 4px;
+      margin-top: 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .view-details:hover {
+      background-color: #0800ff;
+    }
+
+    #industry-projects {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+    
+    
+    .project-card {
+      background-color: #1f2937; /* Dark gray background */
+      padding: 20px;
+      border-radius: 8px;
+      width: 48%; /* Adjust width to take up half of the space */
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .first-card {
+      position: relative;
+      left: -10%; /* Move to the left */
+    }
+    
+    .second-card {
+      position: relative;
+      right: -10%; /* Move to the right */
+      top: 20px; /* Move slightly downward */
+    }
+    
+
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  
+  <!-- Navigation Bar -->
+ <header class="flex items-center justify-between p-5 bg-gray-800">
+    <div class="flex items-center space-x-3">
+      <!-- Profile Icon -->
+      <img src="logo.png" alt="Profile Icon" class="w-10 h-10 rounded-full">
+      <h1 class="text-1xl font-bold">Pavithra</h1>
+    </div>
+    <nav class="space-x-4">
+      <a href="index.html" class="hover:text-blue-400">
+          <i class="fas fa-home mr-2"></i> Home
+      </a>
+      <a href="about.html" class="hover:text-blue-400">
+          <i class="fas fa-user mr-2"></i> About
+      </a>
+      <a href="projects.html" class="hover:text-blue-400">
+          <i class="fas fa-briefcase mr-2"></i> Projects
+      </a>
+      <a href="contact.html" class="hover:text-blue-400">
+          <i class="fas fa-envelope mr-2"></i> Contact
+      </a>
+  </nav>
+  
+  </header>
+
+  <div id="particles-js"></div>
+  <div class="hero-about" id="projects">
+    <div class="flex justify-center p-10">
+      
+      <!-- Projects Section -->
+      <div id="industry-projects">
+        <div class="project-card first-card">
+          <p class="project-title">Restricted Text-Area</p>
+          <div class="divider"></div>
+          <p class="company-name">Company: Personal Project</p>
+          <p class="tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
+          <p class="role">Role: Developer</p>
+          <a href="project1.html" class="view-details">View Details</a>
+        </div>
+        <div class="project-card second-card">
+          <p class="project-title">QUIZ APP</p>
+          <div class="divider"></div>
+          <p class="company-name">Company: Personal Project</p>
+          <p class="tech-stack">Tech Stack: Tailwind, React.js</p>
+          <p class="role">Role: Developer</p>
+          <a href="project2.html" class="view-details">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+      
+      <!-- Sample project data -->
+      <script>
+        
+        const industry_projects = [
+          { title: "Restricted Text-Area", company: "Personal Project", tech: "HTML, CSS, JavaScript", role: "Developer", detailPage: "project1.html" },
+          { title: "QUIZ APP", company: "Personal Project", tech: "Tailwind, React.js", role: "Developer", detailPage: "project2.html" }
+        ];
+      </script>
+    
+      <!-- Script to populate projects -->
+      <script>
+       
+        
+        function populateProjects(projects) {
+          const container = document.getElementById('industry-projects');
+          container.innerHTML = projects.map(renderProjectCard).join('');
+        }
+        
+        // Populate projects
+        document.addEventListener('DOMContentLoaded', function () {
+          populateProjects(industry_projects);
+        });
+        
+    
+        // Populate projects
+        document.addEventListener('DOMContentLoaded', function () {
+          populateProjects(industry_projects);
+        });
+      </script>
+  <!-- Footer -->
+  <footer class="flex items-center justify-between p-5 bg-gray-800">
+    <p class="flex items-center justify-center md:space-x-6 space-y-2 md:space-y-0">
+      <i class="fas fa-briefcase mr-2"></i> Available For Job
+    </p> 
+      <div class="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-2 md:space-y-0">
+        <a href="index.html" class="flex items-center hover:text-blue-400">
+            <i class="fas fa-home mr-2"></i> Home
+        </a>
+        <a href="about.html" class="flex items-center hover:text-blue-400">
+            <i class="fas fa-user mr-2"></i> About
+        </a>
+        <a href="projects.html" class="flex items-center hover:text-blue-400">
+            <i class="fas fa-briefcase mr-2"></i> Projects
+        </a>
+        <a href="contact.html" class="flex items-center hover:text-blue-400">
+            <i class="fas fa-envelope mr-2"></i> Contact
+        </a>
+    </div>
+  
+      <div class="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-2 md:space-y-0">
+        <a href="https://github.com/Pavithra18804" target="_blank" class="flex items-center hover:text-blue-400">
+            <i class="fab fa-github mr-2"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/pavithra-rajarajan-a06b88278" target="_blank" class="flex items-center hover:text-blue-400">
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+        </a>
+        <a href="mailto:pavithuraj18@gmail.com" class="flex items-center hover:text-blue-400">
+            <i class="fas fa-envelope mr-2"></i> Gmail
+        </a>
+    </div>
+  </footer>
+  
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
