@@ -1,0 +1,58 @@
+section {
+    padding: 5rem 2rem;
+    text-align: center;
+    transition: opacity 1s ease-in;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #9b62d7, #b9f425);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-about {
+    height: 100vh;
+}
+
+
+form, button {
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+button {
+    background-color: #8323ea;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #1ef19d;
+}
+
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 1;
+    left: 0;
+    z-index: 0.5;
+}
+
